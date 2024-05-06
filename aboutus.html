@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us</title>
+  <style>
+    /* Basic styling */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-image: url('sam-mcnamara-p0ZvBVpW3KY-unsplash.jpg');
+      background-size: cover;
+      background-attachment: fixed;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.8);
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+    header {
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      text-align: center;
+      color: aliceblue;
+      background-image: url('osman-rana-2cgAJYX1lYM-unsplash.jpg');
+      background-size: cover;
+      padding: 20px 0;
+      font-size: 2em;
+    }
+    .team-members {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.team-member {
+  text-align: center;
+  margin: 20px;
+  width: 100%;
+  max-width: 300px;
+  border: 3px solid black;
+  box-shadow: 0 0 10px rgba(8, 96, 168, 0.675);
+  border-radius: 15px;
+  background: white;
+  position: relative; /* Add position relative to the parent container */
+  padding-top: 100px; /* Add padding to the top to prevent overlap */
+}
+
+.team-member img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-top: -50px; /* Adjust margin-top to half the image's height */
+  border: 5px solid white;
+  position: absolute; /* Position the image absolutely within its container */
+  top: 0; /* Align the top edge of the image with the top edge of its container */
+  left: 50%; /* Center the image horizontally */
+  transform: translateX(-50%); /* Offset the image by half its width to the left */
+}
+
+    .team-member h3 {
+      margin: 0;
+      padding: 10px;
+    }
+    .team-member p {
+      margin: 5px 0;
+      padding: 0 10px;
+    }
+    @media (max-width: 768px) {
+      header {
+        font-size: 1.5em;
+      }
+      .team-member {
+        margin: 20px auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>About Us</header>
+  <div class="container">
+    <div class="team-members">
+      <!-- Team members go here -->
+      <div class="team-member">
+        <img src="Images/DRZ.jpg" alt="Team Member 1">
+        <h3>Bedaprakash Saidarsan Sahoo</h3>
+        <p>Role: VR Unity Developer</p>
+      </div>
+  
+      <div class="team-member">
+        <img src="Images/ABHI.jpg" alt="Team Member 2">
+        <h3>Abhay Maharana</h3>
+        <p>Role: Frontend Web Developer</p>
+      </div>
+  
+      <div class="team-member">
+        <img src="Images/SHIV.jpg" alt="Team Member 3">
+        <h3>Shibuna Pal</h3>
+        <p>Role: Backend Developer</p>
+      </div>
+  
+      <div class="team-member">
+          <img src="Images/UMA.jpg" alt="Team Member 3">
+          <h3>Umashankar Dalai</h3>
+          <p>Role: Tester and SCRUM Master</p>
+        </div>
+  
+        <div class="team-member">
+          <img src="Images/PRAD.jpg" alt="Team Member 3">
+          <h3>Pradeep Kumar Barik</h3>
+          <p>Role: Tester</p>
+        </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
+	<title>Home Page</title>
 	  <style type="text/css">
 		*{
 			margin:0;
@@ -205,13 +205,208 @@
 			font-size: 12px;
 		}
 	}
+
+	* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+
+header {
+  height: 60px;
+  width: 100%;
+  position: fixed; /* Changed from absolute to fixed for better header positioning */
+  top: 0;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.5); /* Added a semi-transparent background for better visibility */
+}
+
+.logo {
+  line-height: 60px;
+  margin-left: 40px;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 30px;
+  font-weight: bold;
+  color: aqua;
+}
+
+.logo:hover {
+  color: blueviolet;
+}
+
+#logo-s {
+  color: aquamarine;
+  margin-left: 5px;
+}
+
+.sign {
+  float: right;
+  line-height: 60px;
+  margin-right: 40px;
+}
+
+.sign a {
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.act {
+  border: 2px solid #fff;
+  border-radius: 50px;
+  padding: 6px 15px;
+}
+
+.sign a:hover {
+  color: #3498db;
+  border-color: #3498db;
+}
+
+.slider {
+  position: relative;
+  width: 100%;
+  background: #2c3e50;
+  margin-top: 60px; /* Added margin-top to push the slider below the fixed header */
+}
+
+.mySlider {
+  height: auto; /* Changed from fixed height to auto for better responsiveness */
+  display: none;
+  overflow: hidden;
+}
+
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  font-size: 50px;
+  padding: 15px;
+  cursor: pointer;
+  color: #fff;
+  transition: 0.1s;
+  user-select: none;
+}
+
+.prev:hover,
+.next:hover {
+  color: #3498db;
+}
+
+.next {
+  right: 0;
+}
+
+.dotsbox {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  bottom: 20px;
+  cursor: pointer;
+}
+
+.dot {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.active,
+.dot:hover {
+  border-color: aquamarine;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.8;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.txt {
+  position: absolute;
+  color: #fff;
+  letter-spacing: 2px;
+  line-height: 35px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  text-align: center; /* Centered the text for better alignment */
+}
+
+.txt h1 {
+  color: #e72399;
+  font-weight: bold;
+  margin: 5px;
+}
+
+.txt p {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+img {
+  width: 100%; /* Ensured the image takes the full width of the container */
+  height: auto; /* Set height to auto for maintaining aspect ratio */
+  animation-name: zoomin;
+  animation-duration: 40s;
+}
+
+@keyframes zoomin {
+  from {
+    transform: scale(1, 1);
+  }
+  to {
+    transform: scale(1.5, 1.5);
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .txt {
+    line-height: 25px;
+    font-size: 80%; /* Reduced font size for smaller screens */
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .logo {
+    font-size: 20px; /* Reduced logo font size for very small screens */
+  }
+
+  .sign {
+    margin-right: 20px;
+  }
+
+  .sign a {
+    font-size: 12px;
+  }
+}
+
 	</style> 
 </head>
 <body>
 	<header>
-		<div class="logo">kid<a id="logo-s"></a></div>
+		<div class="logo">
+		  <img src="/Images/Logo.png" alt="Logo" style="height: 40px; width: 40px;"> <!-- Add your logo image here -->
+		  <a id="logo-s"></a>
+		</div>
 		<span class="sign"><a href="login.html" class="act">SIGN IN</a></span>
-	</header>
+	  </header>
+	  
 
 	<div class="slider">
 		<div class="mySlider fade" style="display: block;">
